@@ -57,4 +57,18 @@ skillful at git
 ### 关联远程分支
 关联之后，git branch -vv 就可以展示关联的远程分支名了，同时推送到远程仓库直接：git push，不需要指定远程仓库了。
 
-    git push -u 
+    git push -u origin master
+
+### 列出所有的远程分支（remote）
+
+    git branch -r
+
+### 列出本地和远程分支（all）
+
+    git branch -a
+
+### 查看远程分支和本地分支的对应关系（-a 信息已经够了）
+
+    git remote show origin
+
+### 远程删除了分支，本地也想删除
