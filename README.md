@@ -36,4 +36,4 @@ skillful at git
 
 展示本地仓库中任意两个 commit 中的文件变动
 
-    git diff <commit-id> <commit-id>
+    git diff <commit-id> <commit-id></commit-id>
