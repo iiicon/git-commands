@@ -37,3 +37,24 @@ skillful at git
 展示本地仓库中任意两个 commit 中的文件变动
 
     git diff <commit-id> <commit-id></commit-id>
+
+### 展示工作区、暂存区和本地仓库的不同（这个看着有点乱）
+
+    git diff HEAD
+
+### 快速切换到上一个分支（感觉还挺好用的）
+
+    git checkout - 
+
+### 删除已经合并到 master 的分支
+
+    git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d 
+
+### 展示本地分支关联远程仓库的情况
+
+    git branch -vv
+
+### 关联远程分支
+关联之后，git branch -vv 就可以展示关联的远程分支名了，同时推送到远程仓库直接：git push，不需要指定远程仓库了。
+
+    git push -u 
