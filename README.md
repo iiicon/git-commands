@@ -71,4 +71,6 @@ skillful at git
 
     git remote show origin
 
-### 远程删除了分支，本地也想删除
+### 远程删除了分支，本地也想删除（有问题）
+
+    git remote prune origin
