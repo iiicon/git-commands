@@ -135,4 +135,30 @@ skillful at git
 
     git tag -ln
 
+---
 
+### 放弃工作区的修改（这个是神器）
+
+    git checkout <file-name>
+
+放弃所有更改
+
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+    git checkout .
+
+添加到本地仓库
