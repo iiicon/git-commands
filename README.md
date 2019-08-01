@@ -71,6 +71,23 @@ skillful at git
 
     git remote show origin
 
-### 远程删除了分支，本地也想删除（有问题）
+### 远程删除了分支，本地也想删除
 
     git remote prune origin
+
+### 创建并切换到本地分支
+
+    git checkout -b <branch-name> origin/<branch-name>
+
+### 删除本地分支
+
+    git branch -d <branch-name>
+
+### 删除远程分支
+
+    git push origin --delete <branch-name>
+
+### 重命名本地分支
+
+    测试tag
+
