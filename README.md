@@ -145,4 +145,6 @@ skillful at git
 
     git checkout .
 
-测试依稀commit 回到固定的
+### 以新增一个 commit 的方式还原某一个 commit 的修改
+
+    git revert <commit-id>
