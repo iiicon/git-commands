@@ -119,11 +119,20 @@ skillful at git
 
     git push orgin :refs/tags/<tag-name>
 
-### 切回到某个标签
+### 切回到某个标签（只能 -b）
 
     git checkout -b <branch-name> <tag-name>
 
-测试回到标签
-测试回到标签
-测试回到标签
-测试回到标签
+### 查看标签
+
+    git tag
+
+展示当前分支最近的 tag
+
+    git describe --tags --abbrev=0
+
+查看标签的详细信息
+
+    git tag -ln
+
+
