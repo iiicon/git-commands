@@ -20,7 +20,8 @@ skillful at git
     git reset --hard origin/master
 
 ### 重设第一个 commit
-也就是把所有的改动重新放回工作区，并清空所有的 commit 这样就可以重新开始第一个 commit 了 
+
+也就是把所有的改动重新放回工作区，并清空所有的 commit 这样就可以重新开始第一个 commit 了
 
     git update-ref -d HEAD
 
@@ -44,17 +45,18 @@ skillful at git
 
 ### 快速切换到上一个分支（感觉还挺好用的）
 
-    git checkout - 
+    git checkout -
 
 ### 删除已经合并到 master 的分支
 
-    git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d 
+    git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d
 
 ### 展示本地分支关联远程仓库的情况
 
     git branch -vv
 
 ### 关联远程分支
+
 关联之后，git branch -vv 就可以展示关联的远程分支名了，同时推送到远程仓库直接：git push，不需要指定远程仓库了。
 
     git push -u origin master
@@ -89,5 +91,39 @@ skillful at git
 
 ### 重命名本地分支
 
-    测试tag
+    git branch -m <new-branch-name>
 
+### 本地创建标签
+
+    git tag <version-number>
+
+默认 tag 是打在最近一次 commit 记录上，如果需要指定 commit 打 tag
+
+    git tag -a <version-number> -m '描述' <commit-id>
+
+### 推送标签到远程仓库
+
+    git push origin <local-version-number>
+
+一次性推送所有
+
+    git push origin --tags
+
+### 删除本地分支
+
+    git tag -d <tag-name>
+
+### 删除远程标签
+
+需要先删除本地标签，再删除远程标签
+
+    git push orgin :refs/tags/<tag-name>
+
+### 切回到某个标签
+
+    git checkout -b <branch-name> <tag-name>
+
+测试回到标签
+测试回到标签
+测试回到标签
+测试回到标签
