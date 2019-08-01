@@ -144,21 +144,7 @@ skillful at git
 放弃所有更改
 
     git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
 
-添加到本地仓库
+### 以新增一个 commit 的方式还原一个 commit 的修改
+
+    git revert <commit-id>
