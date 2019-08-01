@@ -144,21 +144,5 @@ skillful at git
 放弃所有更改
 
     git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
-    git checkout .
 
-添加到本地仓库
+测试依稀commit 回到固定的
