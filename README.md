@@ -145,6 +145,58 @@ skillful at git
 
     git checkout .
 
-### 以新增一个 commit 的方式还原一个 commit 的修改
+### 以新增一个 commit 的方式还原某一个 commit 的修改
 
-    git revert <commit-id>
+    git revert <commit-id></commit-id>
+
+### 回到某个 commit 的状态，并删除后面的 commit
+
+    git reset <commit-id>  #默认就是-mixed参数。
+
+    git reset --mixed HEAD^  #回退至上个版本，它将重置HEAD到另外一个commit,并且重置暂存区以便和HEAD相匹配，但是也到此为止。工作区不会被更改。
+
+    git reset --soft HEAD~3  #回退至三个版本之前，只回退了commit的信息，暂存区和工作区与回退之前保持一致。如果还要提交，直接commit即可
+
+    git reset --hard <commit-id>  #彻底回退到指定commit-id的状态，暂存区和工作区也会变为指定commit-id版本的内容
+
+### 修改上一个 commit 的描述
+
+    git commit --amend
+
+### 查看某段代码是谁写的
+
+    git blame <file-name>
+
+### 显示本地更新过 HEAD 的 git 命令记录
+
+每次更新了 HEAD 的 git 命令比如 commit、amend、cherry-pick、reset、revert 等都会被记录下来（不限分支），就像 shell 的 history 一样，这样你就可以 reset 到任何一次更新了 HEAD 的操作之后，而不仅仅是回到当前分支下的某个 commit 之后的状态
+
+    git reflog
+
+### 修改作者名
+
+    git commit --amend --author="GerritV<shiguangwei5@gmail.com>"
+
+### 修改远程仓库的 url
+
+    git remote set-url origin <URL>
+
+### 增加远程仓库
+
+    git remote add origin <remote-url>
+
+### 列出所有的远程仓库
+
+    git remote
+
+### 查看两个星期内的改动
+
+    git whatchanged --since="2 weeks ago"
+
+### 把 A 分支的某一个 commit 放到 B 分支上
+
+    git checkout <branch-name> && git cherry-pick <commit-id>
+
+### 存储当前状态，包括 untracked 的文件
+
+    git stash
