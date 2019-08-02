@@ -148,3 +148,5 @@ skillful at git
 ### 以新增一个 commit 的方式还原某一个 commit 的修改
 
     git revert <commit-id>
+
+    测试 commit
