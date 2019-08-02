@@ -215,4 +215,8 @@ skillful at git
 
 ### 回到最后一个 stash，并删除这个 stash
 
-    git stash pop
+    git stash pop（感觉不太好用）
+
+### 删除所有的 stash
+
+    git stash clear
