@@ -195,4 +195,8 @@ skillful at git
 
 ### 把 A 分支的某一个 commit 放到 B 分支上
 
-    把此次提交切换到 ee....
+    git checkout <branch-name> && git cherry-pick <commit-id>
+
+### 存储当前状态，包括 untracked 的文件
+
+    git stash
