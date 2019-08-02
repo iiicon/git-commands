@@ -197,6 +197,22 @@ skillful at git
 
     git checkout <branch-name> && git cherry-pick <commit-id>
 
-### 存储当前状态，包括 untracked 的文件
+### 存储当前状态，但不用提交 commit
 
     git stash
+
+### 存储当前状态，包括 untracked 的文件
+    
+    git stash -u
+
+### 展示所有的 stashes
+
+    git stash list
+
+### 回到某个 stash 的状态
+
+    git stash apply <stahs@{version}> // 这个 list 是栈
+
+### 回到最后一个 stash，并删除这个 stash
+
+    git stash pop
