@@ -220,3 +220,49 @@ skillful at git
 ### 删除所有的 stash
 
     git stash clear
+
+### 展示简化的 commit 历史
+
+    git log --pretty=oneline --graph --decorate --all
+    和我自己配的 glog 差不多
+
+### 把一个分支到处成一个文件
+
+    git bundle create <file> <branch-name> // 二进制文件
+
+### 执行 rebase 之前自动 stash
+
+    git rebase --autostash
+
+### 从远程仓库根据 ID，拉下某一状态，到本地分支
+
+    git fetch origin pull/<id>/head:<branch-name>
+
+### 详细展示一行中的修改
+
+    git diff --word-diff
+
+### 清除 gitignore 文件中记录的文件
+
+    git clean -X -f
+
+### 展示所有的 alias 和 configs
+
+    git config --local --list（当前目录）
+    git config --global --list(全局)
+
+### commit 历史中显示 branck 有的，但是 branch2 没有 commit
+
+    igt log <Branch1> <^Branch2>
+
+### 在 commit log 中显示 GPG 签名
+
+    git log --show-signature
+
+### 删除全局设置
+
+    git config --global --unset <entry-name>
+
+### 新建并切换到新分支上，同时这个分支没有任何 commit
+
+    git clone --orphan <branch-name>
