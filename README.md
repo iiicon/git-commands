@@ -202,7 +202,11 @@ skillful at git
     git stash
 
 ### 存储当前状态，包括 untracked 的文件
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> orphan-branch
     git stash -u
 
 ### 展示所有的 stashes
@@ -246,6 +250,13 @@ skillful at git
 
     git clean -X -f
 
+<<<<<<< HEAD
+=======
+### 展示忽略的文件
+
+    git status --ignored
+
+>>>>>>> orphan-branch
 ### 展示所有的 alias 和 configs
 
     git config --local --list（当前目录）
@@ -266,3 +277,70 @@ skillful at git
 ### 新建并切换到新分支上，同时这个分支没有任何 commit
 
     git clone --orphan <branch-name>
+
+### 展示任意分支某一文件的内容
+
+    git show <branch-name>:<file-name>
+
+### clone 下来指定的单一分支
+
+    git clone -b <branch-name> --single-branch xxx.git
+
+### clone 最新一次提交
+
+只会 clone 最近一次提交，将减少 clone 的时间
+
+    git clone --depth=1 xxx.git
+
+### 忽略某个文件的改动
+
+关闭 track 指定文件的改动，也就是 Git 将不会在记录这个文件的改动
+
+    git update-index --assume-unchanged path/to/file
+
+恢复 track 指定文件的改动
+
+    git update-index --no-assume-unchanged path/to/file
+
+### 忽略文件的权限改动
+
+不再将文件的权限变化视作改动
+
+    git config core.fileMode false
+
+### 以最后提交的顺序列出所有 Git 分支
+
+    git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/
+
+### 在 commit log 中查找相关内容（这个不错）
+
+    git log --all --grep='<given-text>'
+
+### 把暂存区的指定 file 放到工作区去
+
+不加参数 默认是 -mixed
+
+    git reset <file-name>
+
+### 强制推送
+
+    git push -f <remote-name> <branch-name>
+
+### git 配置 http he socks 代理
+
+    git config --global https.proxy 'http://127.0.0.1:8001'   # 适用于 privoxy 将 socks 协议转为 http 协议的 http 端口
+    git config --global http.proxy 'http://127.0.0.1:8001'
+    git config --global socks.proxy "127.0.0.1:1080"
+
+### git 配置 ssh 代理
+
+    $ cat ~/.ssh/config
+    Host gitlab.com
+    ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p    # 直接使用 shadowsocks 提供的 socks5 代理端口
+
+    Host github.com
+    ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+
+### 图示
+
+![git.png](https://i.loli.net/2019/08/13/bVTuUGZzegyPA1f.png)
