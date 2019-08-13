@@ -265,5 +265,4 @@ skillful at git
 
 ### 新建并切换到新分支上，同时这个分支没有任何 commit
 
-    git clone -b <branch-name> --single-branch xxx.git
-    
+    git clone --orphan <branch-name>
