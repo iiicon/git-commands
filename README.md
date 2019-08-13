@@ -202,11 +202,7 @@ skillful at git
     git stash
 
 ### 存储当前状态，包括 untracked 的文件
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> orphan-branch
     git stash -u
 
 ### 展示所有的 stashes
