@@ -286,6 +286,7 @@ skillful at git
     git clone --depth=1 xxx.git
 
 ### 忽略某个文件的改动
+
 关闭 track 指定文件的改动，也就是 Git 将不会在记录这个文件的改动
 
     git update-index --assume-unchanged path/to/file
@@ -309,6 +310,7 @@ skillful at git
     git log --all --grep='<given-text>'
 
 ### 把暂存区的指定 file 放到工作区去
+
 不加参数 默认是 -mixed
 
     git reset <file-name>
@@ -330,7 +332,7 @@ skillful at git
     ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p    # 直接使用 shadowsocks 提供的 socks5 代理端口
 
     Host github.com
-    ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p 
+    ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 
 ### 图示
 
