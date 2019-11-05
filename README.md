@@ -246,13 +246,10 @@ skillful at git
 
     git clean -X -f
 
-<<<<<<< HEAD
-=======
 ### 展示忽略的文件
 
     git status --ignored
 
->>>>>>> orphan-branch
 ### 展示所有的 alias 和 configs
 
     git config --local --list（当前目录）
